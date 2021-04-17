@@ -1,0 +1,24 @@
+﻿<Window x:Class="Menu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgInfo" Margin="0,0,0,105" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Врач" Width="10*" Binding="{Binding Doctor}"/>
+                <DataGridTextColumn Header="Дата" Width="10*" Binding="{Binding Time, StringFormat=\{0:f\}}"/>
+                <DataGridTextColumn Header="Кабинет" Width="10*" Binding="{Binding Kabunet}"/>
+                <DataGridTextColumn Header="Посититель" Width="10*" Binding="{Binding Positutel}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="tbSearchDock" HorizontalAlignment="Left" Height="44" Margin="123,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  FontSize="22" TextChanged="tbSearch_TextChanged"/>
+        <Label Content="Врач" HorizontalAlignment="Left" Height="44" Margin="32,330,0,0" VerticalAlignment="Top" Width="68" FontSize="24"/>
+        <TextBox x:Name="tbSearchPositil" HorizontalAlignment="Left" Height="44" Margin="444,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  FontSize="22" TextChanged="tbSearchPositil_TextChanged"/>
+        <Label Content="Посититель" HorizontalAlignment="Left" Height="44" Margin="293,330,0,0" VerticalAlignment="Top" Width="146" FontSize="24"/>
+
+    </Grid>
+</Window>
